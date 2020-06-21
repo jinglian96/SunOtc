@@ -13,31 +13,48 @@ $ composer require sunotc/sdk-php
 ```
 use SunOtc\OtcService
 
-try {
-    //传入Rsa prikey 私钥
-        //查询商户资产
-        $data = array (
-           'app_id'        => '123',
-           'merc_order_id' => "200611184930170114",
-        );
-        $OtcService = (new OtcService("",prikey));
-        $result = $OtcService->getOrderMsg($data);
-    if(!$result || $result['code'] != 0){
-        $this->fail($result['code'], $result['message']);
-    }
-} catch (BCloudException $e) {
-    //异常处理
-    $this->fail(ResponseService::ERROR_MISSING_PARAM, $e->getMessage());
-}
+    $data       = '{"app_id":"123","merc_order_id":"200611184930170114"}';
+    $OtcService = (new OtcService(Dictionary::PUBLIC_KEY, Dictionary::PRI_KEY));
+    $OtcService->getOrderMsg($data);
+    //                //查询交易限制
+    $data       = '{"app_id":"123"}';
+    $OtcService = (new OtcService(Dictionary::PUBLIC_KEY, Dictionary::PRI_KEY));
+    $OtcService->getTradeLimit($data);*/
+    
+    //查询商户资产
+     $data = '{"app_id":"123","merc_order_id":"200611184930170114"}';
+     $OtcService = (new OtcService(Dictionary::PUBLIC_KEY,Dictionary::PRI_KEY));
+     $OtcService->getMercAsset($data);
+    
+    //        //查询价格
+    $data       = '{"app_id":"123","coin":"USDT"}';
+    $OtcService = (new OtcService(Dictionary::PUBLIC_KEY, Dictionary::PRI_KEY));
+    $OtcService->getTradePrice($data);
+        
+        
 //返回数据
-$address_info  = [
-    'code'    => 0,
-    'message' => '成功',
-    'data'    => [
-        "address"=> "0x9787Bb1dfa0C9b74a0ECe2b116c2a61Efc46069b",
-        "address_tag"=> ""
-    ]
-  ];
+$address_info  = '{
+                      "code":0,
+                      "message":"success",
+                      "data":[
+                          {
+                              "pay_type":"BANK",
+                              "amount_min":1000,
+                              "amount_max":5000
+                          },
+                          {
+                              "pay_type":"WECHAT",
+                              "amount_min":1000,
+                              "amount_max":5000
+                          },
+                          {
+                              "pay_type":"ALIPAY  ",
+                              "amount_min":1000,
+                              "amount_max":5000
+                          }
+                      ],
+                      "time":1592729822
+                  }'；
 ```
 
 ### 链接
