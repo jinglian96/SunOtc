@@ -1,18 +1,21 @@
 {
   "name": "sunotc/sdk-php",
   "description": "php sdk for sunotc.otc",
+  "license": "MIT",
   "homepage": "https://github.com/jinglian96/SunOtc",
   "type": "library",
   "require": {
     "php": ">=5.3.0",
     "rmccue/requests": "^1.7"
   },
+
   "authors": [
     {
       "name": "sunOtc",
       "email": "zhangwenli@eschain.pro"
     }
   ],
+
   "autoload": {
     "psr-4": {
       "SunOtc\\": "src/SunOtc"
