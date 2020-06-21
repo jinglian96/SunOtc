@@ -14,7 +14,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "SunOtc": "src"
+      "SunOtc\\": "src/BCloudOne"
     }
   }
 }
