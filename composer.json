@@ -1,7 +1,7 @@
 {
   "name": "sunotc/sdk-php",
   "description": "php sdk for sunotc.otc",
-  "homepage": "https://github.com/jinglian96/SunOtc.git",
+  "homepage": "https://github.com/jinglian96/SunOtc",
   "type": "library",
   "require": {
     "php": ">=5.3.0",
