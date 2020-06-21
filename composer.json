@@ -8,13 +8,13 @@
   },
   "authors": [
     {
-      "name": "SunOtc",
-      "email": "admin@bcloud.one"
+      "name": "≈",
+      "email": "zhangwenli@eschain.pro"
     }
   ],
   "autoload": {
     "psr-4": {
-      "BCloudOtc\\": "src/SunOtc"
+      "SunOtc": "src"
     }
   }
 }
