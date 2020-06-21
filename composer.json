@@ -5,7 +5,7 @@
   "homepage": "http://github.com/jinglian96/SunOtc",
   "type": "library",
   "require": {
-    "php": ">=5.3.0",
+    "php": ">=5.3.0"
   },
 
   "authors": [
