@@ -32,29 +32,29 @@ use SunOtc\OtcService
     $OtcService->getTradePrice($data);
         
         
-//返回数据
-$address_info  = '{
-                      "code":0,
-                      "message":"success",
-                      "data":[
-                          {
-                              "pay_type":"BANK",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          },
-                          {
-                              "pay_type":"WECHAT",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          },
-                          {
-                              "pay_type":"ALIPAY  ",
-                              "amount_min":1000,
-                              "amount_max":5000
-                          }
-                      ],
-                      "time":1592729822
-                  }'；
+//返回数据,例如
+{
+      "code":0,
+      "message":"success",
+      "data":[
+          {
+              "pay_type":"BANK",
+              "amount_min":1000,
+              "amount_max":5000
+          },
+          {
+              "pay_type":"WECHAT",
+              "amount_min":1000,
+              "amount_max":5000
+          },
+          {
+              "pay_type":"ALIPAY  ",
+              "amount_min":1000,
+              "amount_max":5000
+          }
+      ],
+      "time":1592729822
+}；
 ```
 
 ### 链接
